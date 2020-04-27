@@ -8,7 +8,7 @@
         <div class="columns">
             <div class="column">
                 <h3>Line Chart</h3>
-                <line-chart></line-chart>
+                <stream></stream>
             </div>
             <div class="column">
                 <h3>Bar Chart</h3>
@@ -30,18 +30,20 @@
 </template>
 
 <script>
-import LineChart from './LineChart'
+// import LineChart from './LineChart'
 import BarChart from './BarChart'
 import BubbleChart from './BubbleChart'
 import Reactive from './Reactive'
+import Stream from './Streaming'
 
 export default {
   name: 'VueChartJS',
   components: {
-    LineChart,
+    // LineChart,
     BarChart,
     BubbleChart,
-    Reactive
+    Reactive,
+    Stream
   },
   data () {
     return {
