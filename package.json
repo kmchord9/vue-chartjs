@@ -19,7 +19,6 @@
     "chartjs-plugin-streaming": "^1.8.0",
     "chartkick": "^3.2.0",
     "hchs-vue-charts": "^1.2.8",
-    "jquery": "^3.5.0",
     "vue": "^2.5.2",
     "vue-chartjs": "^3.5.0",
     "vue-chartkick": "^0.6.0",

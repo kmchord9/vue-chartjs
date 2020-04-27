@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import gv from '../src/mixins/globalValiables'
-Vue.mixin(gv)
+// import gv from '../src/mixins/globalValiables'
+// Vue.mixin(gv)
 
 Vue.config.productionTip = false
 
