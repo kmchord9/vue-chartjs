@@ -8,7 +8,7 @@
         <div class="columns">
             <div class="column">
                 <h3>Line Chart</h3>
-                <stream></stream>
+                <stream msg='http://kmroot.local:3000/'></stream>
             </div>
             <div class="column">
                 <h3>Bar Chart</h3>

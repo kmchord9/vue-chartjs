@@ -5,18 +5,22 @@ import axios from 'axios'
 
 export default {
   extends: Line,
-  props: ['sensorServer', 'divice'],
+  props: {
+    msg: String
+  },
   methods: {
-    getdata: async () => {
-      var res = await axios.get('http://kmroot.local:3000/')
-      console.log(this.diviceName)
+    getdata: async (msg) => {
+      var res = await axios.get(msg)
+      console.log(msg)
       return res.data.ADT7410.temp
     }
   },
   mounted () {
     this.renderChart({
       datasets: [{
-        data: []
+        data: [],
+        borderColor: 'rgba(255,0,0,1)',
+        backgroundColor: 'rgba(0,0,0,0)'
       }]
     }, {
       scales: {
@@ -25,12 +29,12 @@ export default {
           realtime: {
             delay: 2000,
             refresh: 2000,
-            duration: 60000,
+            duration: 300000,
             onRefresh: (chart) => {
               chart.data.datasets.forEach(async (dataset) => {
                 dataset.data.push({
                   x: Date.now(),
-                  y: await this.getdata()
+                  y: await this.getdata(this.msg)
                 })
               })
             }
