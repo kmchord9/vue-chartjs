@@ -12,7 +12,7 @@
             </div>
             <div class="column">
                 <h3>Bar Chart</h3>
-                <bar-chart></bar-chart>
+                <line-chart msg='http://localhost:3000/api/logs/?created_at__date=2020-05-01'></line-chart>
             </div>
         </div>
         <div class="columns">
@@ -30,8 +30,8 @@
 </template>
 
 <script>
-// import LineChart from './LineChart'
-import BarChart from './BarChart'
+import LineChart from './LineChart'
+// import BarChart from './BarChart'
 import BubbleChart from './BubbleChart'
 import Reactive from './Reactive'
 import Stream from './Streaming'
@@ -39,8 +39,8 @@ import Stream from './Streaming'
 export default {
   name: 'VueChartJS',
   components: {
-    // LineChart,
-    BarChart,
+    LineChart,
+    // BarChart,
     BubbleChart,
     Reactive,
     Stream
