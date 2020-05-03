@@ -8,11 +8,11 @@
         <div class="columns">
             <div class="column">
                 <h3>Line Chart</h3>
-                <stream msg='http://kmroot.local:3000/'></stream>
+                <line-chart></line-chart>
             </div>
             <div class="column">
                 <h3>Bar Chart</h3>
-                <line-chart msg='http://localhost:3000/api/logs/?created_at__date=2020-05-01'></line-chart>
+                <line-chart msg='http://localhost:3000/api/logs/?created_at__date=2020-05-02&format=json'></line-chart>
             </div>
         </div>
         <div class="columns">
@@ -34,7 +34,7 @@ import LineChart from './LineChart'
 // import BarChart from './BarChart'
 import BubbleChart from './BubbleChart'
 import Reactive from './Reactive'
-import Stream from './Streaming'
+// import Stream from './Streaming'
 
 export default {
   name: 'VueChartJS',
@@ -42,8 +42,8 @@ export default {
     LineChart,
     // BarChart,
     BubbleChart,
-    Reactive,
-    Stream
+    Reactive
+    // Stream
   },
   data () {
     return {
